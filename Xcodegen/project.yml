@@ -1,0 +1,36 @@
+name: TinkoffTestApp
+
+options:
+  bundleIdPrefix: TwoTow
+  xcodeVersion: '14.0.1'
+  deploymentTarget: '13.0'
+  groupSortPosition: top
+  generateEmptyDirectories: true
+  findCarthageFrameworks: true
+  minimumXcodeGenVersion: '2.32.0'
+
+configs:
+  Debug.Dev: debug
+  Debug.Prod: debug
+  Release: release
+
+targets:
+  TinkoffTestApp:
+    type: application
+    platform: iOS
+    deploymentTarget: '13.0'
+    settings:
+      base:
+        MARKETING_VERSION: '1.0'
+    sources:
+      - path: ../TinkoffTestApp
+
+
+targetTemplates:
+  Framework:
+    type: framework
+    platform: iOS
+    deploymentTarget: '13.0'
+    settings:
+      base:
+        MARKETING_VERSION: '1.0'
